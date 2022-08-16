@@ -1,0 +1,1 @@
+In this project i'm going to create frontend part for the Fundoo Note App
