@@ -81,6 +81,9 @@
     justify-content: space-between;
 }
 
+input{
+    outline: none;
+}
 .inputFName {
     width: 47%;
     border: 1px solid gray;
@@ -243,4 +246,21 @@ a:hover{
     appearance: none;
     border: 2.5px solid gray;
     border-radius: 3px;   
+}
+
+.formError{
+    border: 2px solid red;
+        width: 47%;
+        border-radius: 5px;
+        height: 35px;
+        padding-left: 5px;
+    
+}
+.userError{
+    width: 92%;
+    border: 2px solid red;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+    margin-top: 25px;
 }

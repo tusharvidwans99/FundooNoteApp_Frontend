@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style/SignUp.css">
+    <script src="../Script/Signup.js"></script>
     <title>Fundoo Note</title>
 </head>
 <body>
@@ -23,25 +24,25 @@
                 <p>Create your Fundoo Account</p>
 
                 <div class="names">
-                    <div class="inputFName">
+                    <div class="inputFName" id="fid">
                         <input id="FirstName" type="text" placeholder="First Name">
                     </div>
-                    <div class="inputLName">
+                    <div class="inputLName" id="lid">
                         <input id="LastName" type="text" placeholder="Last Name">
                     </div>
                 </div>
                 <p id="nameshint"></p>
-                <div class="inputusername">
+                <div class="inputusername" id="uid">
                     <input id="username" type="text" placeholder="User Name">
                 </div>
                 <p id="usernameHint">You can use letters, numbers and periods</p>
                 <a>Use my current email address instead</a>
 
                 <div class="psw">
-                    <div class="inputPassword">
+                    <div class="inputPassword" id="pid">
                         <input id="password" type="text" placeholder="Password">
                     </div>
-                    <div class="inputcnfpassword">
+                    <div class="inputcnfpassword" id="cpid">
                         <input id="cnfpassword" type="text" placeholder="Confirm Password">
                     </div>
                 </div>
