@@ -1,0 +1,226 @@
+.outer{
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner{
+    border: 1px solid rgb(230, 224, 224);
+    width: 25%;
+    height: auto;
+    padding: 10px;
+    padding-top: 20px;
+    
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    
+}
+.regForm{
+    width: 90%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+ 
+}
+
+
+.Logo {
+
+    font-size: 22px;
+    font-weight: 400;
+
+}
+
+.fcolor{
+    color: blue;
+    
+}
+.ucolor{
+    color: red;
+}
+.ncolor{
+    color: orange;
+}
+
+.dcolor {
+    color: blue;
+}
+
+.ocolor1 {
+    color: green;
+}
+
+.ocolor2{
+    color: red;
+}
+
+
+
+
+.sign-in{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.sent{
+    margin-top: -7px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.inputUDiv{
+    width: 92%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+    margin-top: 25px;
+}
+#userName {
+    border: none;
+    outline:none!important;
+    height: 30px;
+    width: 95%;
+}
+.inputPDiv{
+    width: 92%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+    margin-top: 15px;
+}
+
+#password {
+    border: none;
+    outline:none!important;
+    height: 30px;
+    width: 95%;
+}
+#cpassword {
+    border: none;
+    outline:none!important;
+    height: 30px;
+}
+#usernameHint{
+    font-size: 12px;
+    color: grey;
+    margin-right: 300px;
+    margin-top: 2px;
+}
+#passwordHint{
+    font-size: 12px;
+    color: grey;
+    margin-right: 300px;
+    margin-top: 2px;
+}
+.signin{
+    color: #1a73e8;
+    padding: 5px;
+    border-radius: 5px;
+}
+.signin:hover{
+    background-color: rgb(236, 236, 245);
+    cursor: pointer;
+}
+.msg{
+    margin-top: 40px;
+    color: gray;
+    font-size: 15px;
+    margin-left: 4px;
+}
+.tags{
+    color: #1a73e8;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.tags:hover{
+    background-color: rgb(245, 245, 248);
+    cursor: pointer;
+}
+.psw{
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+#passwordHint{
+    font-size: 12px;
+    color: grey;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+#nameshint{
+    font-size: 12px;
+    color: grey;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+#showbox{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 20px;
+}
+#showbox:hover{
+    background-color: rgb(231, 227, 227);
+    cursor: pointer;
+}
+.check{
+    margin-left: 10px;
+    height: 50px;
+   
+    display: flex;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+.next{
+    background-color: #1a73e8;
+    border: none;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+#info{
+    font-size: 18px;
+    margin: 0px;
+    color: grey;
+}
+.formError{
+    border: 2px solid red;
+    width: 92%;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+    margin-top: 15px;
+    
+}
+.userError{
+    width: 92%;
+    border: 2px solid red;
+    border-radius: 5px;
+    height: 35px; 
+    padding-left: 5px;
+    margin-top: 25px;
+}
+.data{
+    border: greenyellow;
+    width: 98%;
+}
