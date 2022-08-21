@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     let userName = document.getElementById('username');
     let password = document.getElementById('password');
     let cnfpassword = document.getElementById('cnfpassword');
-    let next = document.getElementsByClassName('next');
+    let next = document.getElementById('btn');
 
     let success, error;
     let fn=0, ln=0, un=0, psw=0, cnfpw=0;
@@ -65,11 +65,39 @@ window.addEventListener('DOMContentLoaded',()=>{
             a = showError(errid, "Enter valid data", oldclass, newclass,divId);
             console.log(a);
             return 0;
-          } else {
+        } else {
             a= showSuccess(errid, oldclass, newclass,divId);
             console.log(a);
             return 1;
+        }
+    };
+
+
+
+    next.addEventListener('click',()=>{
+        console.log("Hello", fName.value, lName.value);
+          let data={
+            firstName:fName.value,
+            lastName:lName.value,
+            email:userName.value,
+            password:password.value,
           }
-       };
+          console.log(data);
+          $.ajax({
+            url: 'https://localhost:44306/api/User/Register',
+            type: 'POST',
+            data:JSON.stringify(data),
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            
+            success: function (result) {
+                console.log(result);
+            },
+            error: function (error) {
+              console.log(error);
+            }
+        });
+    });
 
 })

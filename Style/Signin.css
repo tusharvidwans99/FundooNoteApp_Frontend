@@ -36,6 +36,10 @@
 
 }
 
+.Logo span {
+    margin-right: 0px;
+}
+
 .fcolor{
     color: blue;
     
@@ -45,6 +49,7 @@
 }
 .ncolor{
     color: orange;
+
 }
 
 .dcolor {
@@ -123,6 +128,7 @@
     color: #1a73e8;
     padding: 5px;
     border-radius: 5px;
+    text-decoration: none;
 }
 .signin:hover{
     background-color: rgb(236, 236, 245);

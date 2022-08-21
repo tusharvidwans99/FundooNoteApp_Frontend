@@ -226,6 +226,10 @@ a:hover{
     margin-top: 60px;
 }
 
+.signin {
+    text-decoration: none;
+}
+
 .next {
     background-color: #1a73e8;
     border: none;
@@ -243,7 +247,6 @@ a:hover{
 
 .checkboxcls {
     padding: 7.5px!important;
-    appearance: none;
     border: 2.5px solid gray;
     border-radius: 3px;   
 }

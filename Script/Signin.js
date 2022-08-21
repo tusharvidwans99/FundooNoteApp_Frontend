@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   let uName = document.getElementById('userName');
   let psw = document.getElementById('password');
-  let nxt = document.getElementById('btn');
+  let next = document.getElementById('btn');
   let a, em = 0, pswd = 0;
 
   const showError = (input, message, oldcls, newcls, divid) => {
@@ -43,5 +43,34 @@ window.addEventListener('DOMContentLoaded', function () {
       return 1;
     }
   };
+
+
+  next.addEventListener('click',()=>{
+    // console.log("Hello", fName.value, lName.value);
+      let data={
+        email:userName.value,
+        password:password.value,
+      }
+      console.log(data);
+      $.ajax({
+        url: 'https://localhost:44306/api/User/Login',
+        type: 'POST',
+        data:JSON.stringify(data),
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        
+        success: function (result) {
+            console.log(result);
+        },
+        error: function (error) {
+          console.log(error);
+        }
+    });
+});
+
+
+
+
   
 })
