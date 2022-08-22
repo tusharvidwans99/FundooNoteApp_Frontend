@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     let cnfpassword = document.getElementById('cnfpassword');
     let next = document.getElementById('btn');
 
-    let success, error;
     let fn=0, ln=0, un=0, psw=0, cnfpw=0;
 
 

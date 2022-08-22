@@ -233,10 +233,11 @@ a:hover{
 .next {
     background-color: #1a73e8;
     border: none;
-    color: white;
-    width: 70px;
-    height: 30px;
     border-radius: 5px;
+    width: 20%;
+    height: 40px;
+    font-size: large;
+    color: white;
 }
 
 .info {

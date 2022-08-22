@@ -33,31 +33,32 @@
 
     font-size: 22px;
     font-weight: 400;
-
 }
 
-.Logo span {
-    margin-right: 0px;
-}
 
 .fcolor{
     color: blue;
+    margin-right: -4px;
     
 }
 .ucolor{
     color: red;
+    margin-right: -4px;
+
 }
 .ncolor{
     color: orange;
-
+    margin-right: -4px;
 }
 
 .dcolor {
     color: blue;
+    margin-right: -4px;
 }
 
 .ocolor1 {
     color: green;
+    margin-right: -4px;
 }
 
 .ocolor2{
@@ -199,10 +200,11 @@
 .next{
     background-color: #1a73e8;
     border: none;
-    color: white;
-    width: 70px;
-    height: 30px;
     border-radius: 5px;
+    width: 20%;
+    height: 40px;
+    font-size: large;
+    color: white;
 }
 #info{
     font-size: 18px;
