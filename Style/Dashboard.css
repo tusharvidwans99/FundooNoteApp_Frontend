@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  border-bottom: 1px solid #dadce0;
+  padding: 20px;
+  color: #5f6368;
+}
+
+/* ======================== button ======================== */
+button img{
+    width: 25px;
+}
+
+button{
+    border: none;
+    opacity: 0.6;
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 1;
+    background-color: #e5e5e5;
+}
+
+/* ======================== menu ======================== */
+.menu {
+  display: flex;
+  align-items: center;
+}
+#menu{
+    margin-right: 13px;
+}
+.logo-text {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* ======================== search ======================== */
+.search {
+  background: rgb(241, 243, 244);
+  width: 692px;
+  height: 48px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  margin-left: -190px;
+}
+.search-text{
+    border: none;
+    background-color: rgb(241, 243, 244);
+    outline: none;
+    font-size: medium;
+    width: 87%;
+    height: 100%;
+}
+.search-icon img{
+    width: 25px;
+    opacity: 0.6;
+}
+.search-icon{
+    padding: 10px;
+    padding-top: 15px;
+}
+
+.tools{
+    margin-right: -150px;
+}
+
+.SideNav{
+    width: 18%;
+    height: auto;    
+    margin-top: 10px;
+}
+
+.SideNav li {
+    width: auto;
+    height: 45px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.SideNav li:hover {
+    background-color: #efecec;
+} 
+
+.SideNav img {
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 23px;
+}
+
+.SideNav .text {
+    margin-left: 35px;
+    margin-top: -25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
