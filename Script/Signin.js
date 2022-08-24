@@ -62,6 +62,8 @@ window.addEventListener('DOMContentLoaded', function () {
         
         success: function (result) {
             console.log(result);
+            localStorage.setItem('token', result.data);
+            window.location.href='../Pages/Dashboard.html'
         },
         error: function (error) {
           console.log(error);

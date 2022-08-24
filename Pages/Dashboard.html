@@ -6,81 +6,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style/Dashboard.css">
-    <script src="../Script/Dashboard.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FundooNote</title>
 </head>
 
 <body>
-    <nav>
-        <div class="menu">
-            <div id="menu">
-                <button><img src="../Assets/Dashboard/menu.svg"></img></button>
+    <header>
+        <nav class="toolbar">
+            <div class="menu">
+                <div id="menu">
+                    <button onclick="menutoggle()" id="toggle">
+                        <img src="../Assets/Dashboard/menu.svg"></img>
+                    </button>
+                </div>
+                <img src="../Assets/keep_logo.png">
+                <span class="logo-text">Fundoo</span>
             </div>
-            <img src="../Assets/keep_logo.png">
-            <span class="logo-text">Fundoo</span>
+
+            <div class="search">
+                <i class="search-icon"><img src="../Assets/Dashboard/search.svg"></i>
+                <input class="search-text" type="text" placeholder="Search" />
+                <i class="search-icon" id="cancel"><img src="../Assets/Dashboard/close.svg"></i>
+            </div>
+
+            <div class="tools">
+                <button><img src="../Assets/Dashboard/refresh.svg"></button>
+                <button><img src="../Assets/Dashboard/view.svg"></button>
+                <button><img src="../Assets/Dashboard/settings.svg"></button>
+            </div>
+
+            <div class="user">
+                <button><img src="../Assets/Dashboard/apps.svg"></button>
+                <button><img src="../Assets/Dashboard/user.svg"></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <nav id="side-nav" class="side-nav">
+            <div class="side-nav-content">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <i><img src="../Assets/Dashboard/bulb.svg"></i>
+                        <span>
+                            <a id="notes" href="#">Notes</a>
+                        </span>
+                    </li>
+                    <li class="nav-list-item">
+                        <i><img src="../Assets/Dashboard/reminder.svg"></i>
+                        <span>
+                            <a href="#">Reminders</a>
+                        </span>
+                    </li>
+                    <li class="nav-list-item">
+                        <i><img src="../Assets/Dashboard/edit.svg"></i>
+                        <span>
+                            <a href="#">Edit labels</a>
+                        </span>
+                    </li>
+                    <li class="nav-list-item">
+                        <i><img src="../Assets/Dashboard/archive.svg"></i>
+                        <span>
+                            <a href="#">Archive</a>
+                        </span>
+                    </li>
+                    <li class="nav-list-item">
+                        <i><img src="../Assets/Dashboard/trash.svg"></i>
+                        <span>
+                            <a href="#">Bin</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div id="display"></div>
+
+        <div class="note">
+            <form>
+                <div class="create-note-header">
+                    <input class="create-note" onclick="openCard()" id="btn1" type="text" placeholder="Title" />
+                    <button>
+                        <img src="../Assets/NotesCreation/pin.svg" />
+                    </button>
+                </div>
+                <div class="create-note-body">
+                    <textarea class="create-note" id="btn2" type="text" placeholder="Take a note..."></textarea>
+                </div>
+                <div class="create-note-footer">
+                    <div class="icons">
+                        <button>
+                            <img src="../Assets/NotesCreation/remind.svg" />
+                        </button>
+                        <button>
+                            <img src="../Assets/NotesCreation/person.svg" />
+                        </button>
+                        <button>
+                            <img src="../Assets/NotesCreation/color.svg" />
+                        </button>
+                        <button>
+                            <img src="../Assets/NotesCreation/image.svg" />
+                        </button>
+                        <button>
+                            <img src="../Assets/NotesCreation/archive.svg" />
+                        </button>
+                        <button>
+                            <img src="../Assets/NotesCreation/more.svg" />
+                        </button>
+                        <button>
+                            <img src="../Assets/NotesCreation/undo.svg"/>
+                        </button>
+                        <button>
+                            <img src="../Assets/NotesCreation/redo.svg" />
+                        </button>
+                    </div>
+                    <div class="close">
+                        <button onclick="closeCard()">
+                            Close
+                        </button>
+                    </div>                        
+                </div>
+            </form>
+
         </div>
-
-        <div class="search">
-            <i class="search-icon"><img src="../Assets/Dashboard/search.svg"></i>
-            <input class="search-text" type="text" placeholder="Search" />
-            <i class="search-icon" id="cancel"><img src="../Assets/Dashboard/close.svg"></i>
-        </div>
-
-        <div class="tools">
-            <button><img src="../Assets/Dashboard/refresh.svg" title="refresh"></button>
-            <button><img src="../Assets/Dashboard/view.svg" title="view"></button>
-            <button><img src="../Assets/Dashboard/settings.svg" title="settings"></button>
-        </div>
-        <div class="user">
-            <button><img src="../Assets/Dashboard/apps.svg"></button>
-            <button><img src="../Assets/Dashboard/user.svg"></button>
-        </div>
-    </nav>
-
-    <div class="SideNav">
-        <ul>
-            <li id="Notes">
-                <span class="img">
-                    <img src="../Assets/Dashboard/bulb.svg">
-                </span>
-                <span class="text">Notes</span>
-            </li>
-
-            <li id="Reminders">
-                <span class="img">
-                    <img src="../Assets/Dashboard/reminder.svg">
-                </span>
-                <span class="text">Reminders</span>
-            </li>
-            
-            <li id="EditLables">
-                <span>
-                    <img src="../Assets/Dashboard/edit.svg">
-                </span>
-                <span class="text">Lables</span>
-            </li>
-
-            <li id="Archive">
-                <span>
-                    <img src="../Assets/Dashboard/archive.svg">
-                </span>
-                <span class="text">Archive</span>
-            </li>
-
-            <li id="Bin">
-                <span>
-                    <img src="../Assets/Dashboard/trash.svg">
-                </span>
-                <span class="text">Bin</span>
-            </li>
-        </ul>
-
-    <div>
-            
-            
-    
-</div>
-
+    </main>
+    <script src="../Script/Dashboard.js"></script>
 </body>
 
 </html>
