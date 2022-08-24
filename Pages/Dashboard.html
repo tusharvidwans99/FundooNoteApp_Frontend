@@ -83,15 +83,15 @@
         <div id="display"></div>
 
         <div class="note">
-            <form>
+            <form id="form">
                 <div class="create-note-header">
-                    <input class="create-note" onclick="openCard()" id="btn1" type="text" placeholder="Title" />
-                    <button>
+                    <input class="create-note" autocomplete="off" id="title" type="text" placeholder="Title" onclick="CreateNoteOpen()" />
+                    <button id="pin">
                         <img src="../Assets/NotesCreation/pin.svg" />
                     </button>
                 </div>
                 <div class="create-note-body">
-                    <textarea class="create-note" id="btn2" type="text" placeholder="Take a note..."></textarea>
+                    <textarea class="create-note" id="description" type="text" placeholder="Take a note..." autocomplete="off"></textarea>
                 </div>
                 <div class="create-note-footer">
                     <div class="icons">
@@ -101,7 +101,7 @@
                         <button>
                             <img src="../Assets/NotesCreation/person.svg" />
                         </button>
-                        <button>
+                        <button id="color">
                             <img src="../Assets/NotesCreation/color.svg" />
                         </button>
                         <button>
@@ -121,7 +121,7 @@
                         </button>
                     </div>
                     <div class="close">
-                        <button onclick="closeCard()">
+                        <button onclick="CreateNoteClose(), createNote()">
                             Close
                         </button>
                     </div>                        
