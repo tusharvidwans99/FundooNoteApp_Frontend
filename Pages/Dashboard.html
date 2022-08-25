@@ -30,7 +30,7 @@
             </div>
 
             <div class="tools">
-                <button><img src="../Assets/Dashboard/refresh.svg"></button>
+                <button id="refresh"><img src="../Assets/Dashboard/refresh.svg"></button>
                 <button><img src="../Assets/Dashboard/view.svg"></button>
                 <button><img src="../Assets/Dashboard/settings.svg"></button>
             </div>
@@ -45,89 +45,90 @@
         <nav id="side-nav" class="side-nav">
             <div class="side-nav-content">
                 <ul class="nav-list">
-                    <li class="nav-list-item">
+                    <li class="nav-list-item notes" >
                         <i><img src="../Assets/Dashboard/bulb.svg"></i>
                         <span>
                             <a id="notes" href="#">Notes</a>
                         </span>
                     </li>
-                    <li class="nav-list-item">
+                    <li class="nav-list-item reminders">
                         <i><img src="../Assets/Dashboard/reminder.svg"></i>
                         <span>
-                            <a href="#">Reminders</a>
+                            <a id="reminders" href="#">Reminders</a>
                         </span>
                     </li>
-                    <li class="nav-list-item">
+                    <li class="nav-list-item editlable">
                         <i><img src="../Assets/Dashboard/edit.svg"></i>
                         <span>
-                            <a href="#">Edit labels</a>
+                            <a id="editlable" href="#">Edit labels</a>
                         </span>
                     </li>
-                    <li class="nav-list-item">
+                    <li class="nav-list-item archive">
                         <i><img src="../Assets/Dashboard/archive.svg"></i>
                         <span>
-                            <a href="#">Archive</a>
+                            <a id="archive" href="#">Archive</a>
                         </span>
                     </li>
-                    <li class="nav-list-item">
+                    <li class="nav-list-item bin">
                         <i><img src="../Assets/Dashboard/trash.svg"></i>
                         <span>
-                            <a href="#">Bin</a>
+                            <a id="bin" href="#">Trash</a>
                         </span>
                     </li>
                 </ul>
             </div>
         </nav>
 
+        <div id="display-area">
+            
 
-        <div id="display"></div>
-
-        <div class="note">
-            <form id="form">
-                <div class="create-note-header">
-                    <input class="create-note" autocomplete="off" id="title" type="text" placeholder="Title" onclick="CreateNoteOpen()" />
-                    <button id="pin">
-                        <img src="../Assets/NotesCreation/pin.svg" />
-                    </button>
-                </div>
-                <div class="create-note-body">
-                    <textarea class="create-note" id="description" type="text" placeholder="Take a note..." autocomplete="off"></textarea>
-                </div>
-                <div class="create-note-footer">
-                    <div class="icons">
-                        <button>
-                            <img src="../Assets/NotesCreation/remind.svg" />
-                        </button>
-                        <button>
-                            <img src="../Assets/NotesCreation/person.svg" />
-                        </button>
-                        <button id="color">
-                            <img src="../Assets/NotesCreation/color.svg" />
-                        </button>
-                        <button>
-                            <img src="../Assets/NotesCreation/image.svg" />
-                        </button>
-                        <button>
-                            <img src="../Assets/NotesCreation/archive.svg" />
-                        </button>
-                        <button>
-                            <img src="../Assets/NotesCreation/more.svg" />
-                        </button>
-                        <button>
-                            <img src="../Assets/NotesCreation/undo.svg"/>
-                        </button>
-                        <button>
-                            <img src="../Assets/NotesCreation/redo.svg" />
+            <div class="note">
+                <form id="form">
+                    <div class="create-note-header">
+                        <input class="create-note" autocomplete="off" id="title" type="text" placeholder="Title" onclick="CreateNoteOpen()" />
+                        <button id="pin">
+                            <img src="../Assets/NotesCreation/pin.svg" />
                         </button>
                     </div>
-                    <div class="close">
-                        <button onclick="CreateNoteClose(), createNote()">
-                            Close
-                        </button>
-                    </div>                        
-                </div>
-            </form>
-
+                    <div class="create-note-body">
+                        <textarea class="create-note" id="description" type="text" placeholder="Take a note..." autocomplete="off"></textarea>
+                    </div>
+                    <div class="create-note-footer">
+                        <div class="icons">
+                            <button>
+                                <img src="../Assets/NotesCreation/remind.svg" />
+                            </button>
+                            <button>
+                                <img src="../Assets/NotesCreation/person.svg" />
+                            </button>
+                            <button id="color">
+                                <img src="../Assets/NotesCreation/color.svg" />
+                            </button>
+                            <button>
+                                <img src="../Assets/NotesCreation/image.svg" />
+                            </button>
+                            <button>
+                                <img src="../Assets/NotesCreation/archive.svg" />
+                            </button>
+                            <button>
+                                <img src="../Assets/NotesCreation/more.svg" />
+                            </button>
+                            <button>
+                                <img src="../Assets/NotesCreation/undo.svg"/>
+                            </button>
+                            <button>
+                                <img src="../Assets/NotesCreation/redo.svg" />
+                            </button>
+                        </div>
+                        <div class="close">
+                            <button onclick="CreateNoteClose(), createNote()">
+                                Close
+                            </button>
+                        </div>                        
+                    </div>
+                </form>
+            </div>
+            <div class="display-notes"  id="Notes"></div>
         </div>
     </main>
     <script src="../Script/Dashboard.js"></script>
