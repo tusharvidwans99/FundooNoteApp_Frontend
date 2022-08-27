@@ -155,6 +155,7 @@ function displayAllNotes(Notesdata){
         <div class="display-content">
             <p class="ti">${note.title}</p>
             <P class="de">${note.description}</P>
+            <p>color : ${note.color}</p>
         </div>
         <div class="card-footer">
             <button>    
@@ -163,14 +164,12 @@ function displayAllNotes(Notesdata){
             <button>
                     <img src="../Assets/NotesCreation/person.svg" />
             </button>
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">
-                    <img src="../Assets/NotesCreation/color.svg" />
-                </button>
+            <div class="dropdown-color">
+                <img src="../Assets/NotesCreation/color.svg" />
                 <div id="myDropdown" class="dropdown-content">
-                    <a>red</a>
-                    <a>blue</a>
-                    <a>green</a>
+                    <span onclick="ChangeColor(${note.noteID}, 'red')">red</span>
+                    <span onclick="ChangeColor(${note.noteID}, 'blue')">blue</span>
+                    <span onclick="ChangeColor(${note.noteID}, 'green')">green</span>
                 </div>
             </div>
         
@@ -195,24 +194,24 @@ function displayAllNotes(Notesdata){
 function displayArchivedNotes(Notesdata){
     console.log(Notesdata);
    document.getElementById('Notes').innerHTML=Notesdata.map((note)=>
-   `<div class="display-div">
+   `<div class="display-div" style="background-color:${note.color};">
         <div class="display-content">
             <p class="ti">${note.title}</p>
             <P class="de">${note.description}</P>
         </div>
         <div class="card-footer">
-            
+            <button>    
+                    <img src="../Assets/NotesCreation/remind.svg"/>
+            </button>
             <button>
                     <img src="../Assets/NotesCreation/person.svg" />
             </button>
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">
-                    <img src="../Assets/NotesCreation/color.svg" />
-                </button>
+            <div class="dropdown-color">
+                <img src="../Assets/NotesCreation/color.svg" />
                 <div id="myDropdown" class="dropdown-content">
-                    <a>red</a>
-                    <a>blue</a>
-                    <a>green</a>
+                    <span>red</span>
+                    <span>blue</span>
+                    <span>green</span>
                 </div>
             </div>
             <button>
@@ -234,9 +233,9 @@ function displayArchivedNotes(Notesdata){
 
 
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+// function myFunction() {
+//     document.getElementById("color-list").classList.toggle("show");
+//   }
   
   // Close the dropdown if the user clicks outside of it
 //   window.onclick = function(event) {
@@ -438,23 +437,22 @@ function Delete(noteid){
 function ChangeColor(noteid, clr){
     let token = localStorage.getItem('token');
 
-    data = {
-        NoteID:noteid,
-        color:clr
-    }
+    // data = {
+    //     color:clr
+    // }
     // console.log(noteData);
 
     $.ajax({
-        url:`https://localhost:44306/api/Notes/Color`,
+        url:`https://localhost:44306/api/Notes/Color/${noteid}/${clr}`,
         type:'PUT',
-        data:JSON.stringify(data),
+        // data:JSON.stringify(data),
         headers:{
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' +token
         },
         success: function(result){
             console.log(result);
-            getAllNotes(displayTrashNotes);
+            getAllNotes();
             // displayTrashNotes.click();
             // displaynotes.click();
             // resetCreateNote();
