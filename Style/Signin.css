@@ -118,6 +118,9 @@
     color: grey;
     margin-right: 300px;
     margin-top: 2px;
+    margin-left: 68px;
+    margin-top: 2px;
+    width: 25%;
 }
 #passwordHint{
     font-size: 12px;
